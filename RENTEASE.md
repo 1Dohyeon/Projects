@@ -1,8 +1,8 @@
 # RentEase
 
 > **개인 대 개인 렌탈 플랫폼**
-> > 코드 링크: [1Dohyeon/RentEase: 개인 대 개인 렌탈 플랫폼 개발 프로젝트](https://github.com/1Dohyeon/RentEase)
-> >![intro-img](https://github.com/1Dohyeon/RentEase/blob/main/imgs/intro-img.png?raw=true)
+> - 코드 링크: [1Dohyeon/RentEase: 개인 대 개인 렌탈 플랫폼 개발 프로젝트](https://github.com/1Dohyeon/RentEase)
+> ![intro-img](https://github.com/1Dohyeon/RentEase/blob/main/imgs/intro-img.png?raw=true)
 ## 1. 프로젝트 개요
 
 -   참가 인원: 개인 프로젝트
@@ -33,9 +33,7 @@ RentEase는 이러한 비용/공간 문제를 해결하기 위해 개인 간 장
 
 ## 5. 성과 및 배운 점
 
--  RESTful API 설계 및 구현
--  WebSocket을 활용한 실시간 통신
 -  관계형 데이터베이스 설계
-- NestJS 구조와 DI, 모듈화 설계 방식에 대한 깊은 이해 
+- NestJS 구조와 DI, 모듈화 설계 방식에 대한 이해 
 - RESTful API 설계 원칙 및 상태 관리, HTTP 통신 구조 
 - 실시간 통신(WebSocket) 구조 및 예외처리 기법 학습
