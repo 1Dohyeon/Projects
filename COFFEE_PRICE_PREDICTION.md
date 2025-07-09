@@ -59,7 +59,7 @@ NASA 기후 데이터와 yfinance를 활용하여 기후 및 경제 데이터를
 
 최종 모델로는 **Attention 기반 LSTM 모델**을 선정하였다. 기존 LSTM 구조에 Attention 메커니즘을 결합함으로써, 시계열 데이터 내 예측에 중요한 정보를 보다 효과적으로 추출할 수 있도록 구성하였다. 기존 LSTM이 마지막 hidden state를 기반으로 예측을 수행하는 반면, Attention은 시퀀스 전반에서 중요도에 따라 가중치를 부여하여, 가격 예측의 정밀도를 높이는 데 기여한다.
 
-![[모델 예측 결과.png]]
+![모델 예측 결과](https://github.com/1Dohyeon/Projects/blob/main/imgs/%EB%AA%A8%EB%8D%B8%20%EC%98%88%EC%B8%A1%20%EA%B2%B0%EA%B3%BC.png?raw=true)
 
 입력 시퀀스는 기본적으로 예측일 이전 **100일치 데이터**로 설정하였으며, 각 입력 시퀀스에 대해 **7일 및 14일 예측**을 각각 수행하였다. 두 모델은 상호 보완적으로 활용되어, **단기 이상 징후에 대한 선제 대응**과 **중기적 추세 판단**을 모두 가능하게 하는 것을 목표로 하였다.
 
@@ -74,13 +74,13 @@ NASA 기후 데이터와 yfinance를 활용하여 기후 및 경제 데이터를
 
 **최근 4일 평균 대비 예측값이 각각 +0.7% 이상 상승**할 경우 ‘Buy’ 신호를 발생시키는 규칙 기반 전략을 설정하였으며, 해당 신호는 실제 매매로 연결하지 않고 **검증 단계까지만 진행**하였다.
 
-![[두 모델 예측 방향 반대.png]]
+![두 모델 예측 방향 반대](https://github.com/1Dohyeon/Projects/blob/main/imgs/%EB%91%90%20%EB%AA%A8%EB%8D%B8%20%EC%98%88%EC%B8%A1%20%EB%B0%A9%ED%96%A5%20%EB%B0%98%EB%8C%80.png?raw=true)
 
 또한 두 예측(7, 14일) 간 차이가 커질 때 예측 불일치 구간으로 판단한다. 분기 신호는 확정된 매수/회피 판단이 아닌 보수적 접근 또는 판단 보류를 유도하는 경고성 보조 시그널이다. 사용자가 판단하려는 시점이 임계값이 넘은 시점이라면 사용자는 예측 결과에 대해 보수적인 판단을 진행한다. 빨간 점선 초과시 단기 예측이 과도하게 높다고 판단하며 파란 점선 하회 시 단기 예측이 과도하게 낮다고 판단한다.
 
 Buy 신호가 발생한 시점에 매수하고 이를 일주일 보유했을 때의 누적 수익률이 어떻게 변하는지 시간 순서대로 시각화하면 다음과 같다.
 
-![[수익률.png]]
+![수익률](https://github.com/1Dohyeon/Projects/blob/main/imgs/%EC%88%98%EC%9D%B5%EB%A5%A0.png?raw=true)
 
 #### 3.2.4 모델 검증
 
@@ -112,11 +112,11 @@ Buy 신호가 발생한 시점에 매수하고 이를 일주일 보유했을 때
 
 UI 구축은 React 라이브러리를 활용하였으며, 위 **3.4 모델 서버**에서의 응답을 활용하여 그래프로 가격을 시각화하여 다음과 같이 보여준다.
 
-![[./imgs/커피가격 예측 그래프 이미지.png]]
+![커피가격 예측 그래프 이미지](https://github.com/1Dohyeon/Projects/blob/main/imgs/%EC%BB%A4%ED%94%BC%EA%B0%80%EA%B2%A9%20%EC%98%88%EC%B8%A1%20%EA%B7%B8%EB%9E%98%ED%94%84%20%EC%9D%B4%EB%AF%B8%EC%A7%80.png?raw=true)
 
 2주~1년 버튼은 하나의 화면상 그래프의 최대 X축 비율이다. 실제 가격과 7, 14일의 예측 가격을 한 눈에 비교할 수 있다. 구매 및 경고 신호는 신뢰도 검증만 하고, UI에는 구현하지 않았다. 검증을 통해 수익성을 확인하였으며, 검증 결과는 **3.2.3** 에서 확인할 수 있다.
 
-![[뉴스 기사 조회.png]]
+![뉴스 기사 조회](https://github.com/1Dohyeon/Projects/blob/main/imgs/%EB%89%B4%EC%8A%A4%20%EA%B8%B0%EC%82%AC%20%EC%A1%B0%ED%9A%8C.png?raw=true)
 
 위 이미지는 감성 분석 모델의 결과를 보여준다. 중립 감성을 제외하고 상승 및 하락 예측 결과만을 필터링하여 표시하였으며, 각 뉴스 기사의 타이틀을 클릭하면 해당 기사의 원본 URL로 이동할 수 있다. 전체 기사 목록은 최신순으로 정렬되어 있어 최근 시장 동향을 우선적으로 확인할 수 있도록 구성하였다.
 
@@ -142,16 +142,11 @@ UI 구축은 React 라이브러리를 활용하였으며, 위 **3.4 모델 서�
 
 5.    Ko-FinBERT-SC Github Repository. (2022). _Ko-FinBERT-SC: A Korean Financial Sentiment Classification Model Based on BERT.  
   
-_
 
 6.    Araci, D. (2019). _FinBERT: Financial Sentiment Analysis with Pre-trained Language Models.  
-  
-_
 
 7.    Shen, Y., Zhang, P. K. (2024). _Financial Sentiment Analysis on News and Reports Using Large Language Models and FinBERT.  
   
-_
-
 8.    Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2019). _BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding._ Proceedings of _NAACL-HLT_, 4171-4186.  
   
 
@@ -160,7 +155,6 @@ _
 
 _10._  _An Artificial Intelligence Approach to Prediction of Corn Yields under Extreme Weather Conditions Using Satellite and Meteorological Data  
   
-_
 
 11.  신성호 외(2018). _LSTM_ _네트워크를 활용한 농산물 가격 예측 모델_ A Prediction Model for Agricultural Products Price with LSTM Network, 416-429
 
