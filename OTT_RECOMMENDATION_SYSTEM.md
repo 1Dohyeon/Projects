@@ -1,7 +1,7 @@
 # OTT 추천 시스템
 
 > **콘텐츠 1~8개와 해당 콘텐츠들을 방영하는 OTT들을 추천하는 시스템**
-> 링크: [2025-MJU-Social/RecommendModel_withFastAPI](https://github.com/2025-MJU-Social/RecommendModel_withFastAPI/tree/test)
+> - 링크: [2025-MJU-Social/RecommendModel_withFastAPI](https://github.com/2025-MJU-Social/RecommendModel_withFastAPI/tree/test)
 
 ## 1. 프로젝트 개요
 
