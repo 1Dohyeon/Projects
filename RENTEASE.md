@@ -6,9 +6,9 @@
 > > ![intro-img](https://github.com/1Dohyeon/RentEase/blob/main/imgs/intro-img.png?raw=true)
 ## 1. 프로젝트 개요
 
--   참가 인원: 개인 프로젝트
--   기간: 2024/06/18 ~ 2024/07/22 (약 1개월)
--   기술 스택: React, NestJS, MySQL
+- 참가 인원: 개인 프로젝트
+- 기간: 2024/06/18 ~ 2024/07/22 (약 1개월)
+- 기술 스택: React, NestJS, MySQL
 
 ## 2. 프로젝트 배경(개발 동기)
 
